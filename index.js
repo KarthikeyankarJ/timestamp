@@ -18,7 +18,7 @@ fs.writeFileSync(`${dirPath}/currentdate-time.txt`, timeStamp, (res) => {
 
 app.use(express.static("timestamps"));
 
-app.get("/", (request, response) => {
+app.get("/timestamp", (request, response) => {
   response.sendFile(path.join(__dirname, "/timestamp/currentdate-time.txt"));
 });
 
